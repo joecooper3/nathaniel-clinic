@@ -145,6 +145,10 @@ nav a:hover {
   animation: fadeInUp 1s ease-out, arrowBounce 1s 1.5s infinite ease-in-out;
 }
 
+.scroll-arrow a {
+  color: #fdfdfd;
+}
+
 section {
   padding: 150px 50px;
 }

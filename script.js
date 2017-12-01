@@ -47,15 +47,11 @@ $(document).ready(function() {
   }
   $(window).scroll(function() {
     var hT1 = $('#about').offset().top,
-      hH1 = $('#about').outerHeight(),
       hT2 = $('#referrals').offset().top,
-      hH2 = $('#referrals').outerHeight(),
       hT3 = $('#location').offset().top,
-      hH3 = $('#location').outerHeight(),
       wH = $(window).height(),
       wS = $(this).scrollTop();
-      pureWS = $(this).scrollTop();
-      console.log("hT1: " + hT1 + " || calc: " + (hT1 + hH1 - wH));
+      console.log("wS: " + wS);
     if (wS > 400) {
       showAboutContainer();
     }
