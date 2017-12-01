@@ -54,7 +54,6 @@ $(document).ready(function() {
       wS = $(this).scrollTop(),
       aboutContainerBreak = $('.about-container').offset().top;
       microboxContainerBreak = $('.microbox-container').offset().top;
-      console.log("wS: " + wS);
     if (wS > (aboutContainerBreak - wH * 0.75) ) {
       fadeInUp($(".about-container"));
     }
@@ -63,10 +62,8 @@ $(document).ready(function() {
     }
     if (logoStatus === 'green' && wS < hT1) {
       turnLogoWhite();
-      console.log("top line");
     } else if (logoStatus === 'white' && wS > hT1 && wS < hT2) {
       turnLogoGreen();
-      console.log("second line");
     } else if (logoStatus === 'green' && wS > hT2 && wS < hT3) {
       turnLogoWhite();
     } else if (logoStatus === 'white' && wS > hT3) {
