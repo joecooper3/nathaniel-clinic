@@ -29,7 +29,8 @@ $(document).ready(function() {
   cycle();
 
   /**
-      * Changes the color of the logo
+      * Changes the color of the logo and triggers fadeInUp animations
+      on scroll
       **/
   var logo = $("#veevee").find("path");
   var logoStatus = 'white';
@@ -41,19 +42,24 @@ $(document).ready(function() {
     logo.css({fill: '#40ad48'}).each;
     logoStatus = 'green';
   }
-  function showAboutContainer() {
-    $(".about-container").addClass("fadeInUp");
-    $(".about-container").removeClass("hidden");
+  function fadeInUp(el) {
+    el.addClass("fadeInUp");
+    el.removeClass("hidden");
   }
   $(window).scroll(function() {
     var hT1 = $('#about').offset().top,
       hT2 = $('#referrals').offset().top,
       hT3 = $('#location').offset().top,
       wH = $(window).height(),
-      wS = $(this).scrollTop();
+      wS = $(this).scrollTop(),
+      aboutContainerBreak = $('.about-container').offset().top;
+      microboxContainerBreak = $('.microbox-container').offset().top;
       console.log("wS: " + wS);
-    if (wS > 400) {
-      showAboutContainer();
+    if (wS > (aboutContainerBreak - wH * 0.75) ) {
+      fadeInUp($(".about-container"));
+    }
+    if (wS > (microboxContainerBreak - wH * 0.75) ) {
+      fadeInUp($(".microbox-container"));
     }
     if (logoStatus === 'green' && wS < hT1) {
       turnLogoWhite();
