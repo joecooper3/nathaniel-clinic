@@ -1,15 +1,5 @@
 $(document).ready(function() {
 
-/** Set initial header to height of window **/
-  function setHeight() {
-    windowHeight = $(window).innerHeight();
-    $('header').css('min-height', windowHeight);
-  };
-  setHeight();
-  $(window).resize(function() {
-    setHeight();
-  });
-
   /** Little arrow on the bottom the header that encourages scrolling **/
 
   function killArrow() {

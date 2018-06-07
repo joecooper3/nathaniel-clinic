@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -5,6 +9,8 @@ body {
 }
 
 header {
+  background-color: #40ad48;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,15 +18,30 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #40ad48;
-  padding: 0 50px;
+  -webkit-box-pack: space-between;
+      -ms-flex-pack: space-between;
+          justify-content: space-between;
 }
 
 .hidden {
   visibility: hidden;
+}
+
+#big-three {
+  height: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  padding: 175px 50px 150px 50px;
+    -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: space-between;
+      -ms-flex-pack: space-between;
+          justify-content: space-between;
+
 }
 
 nav {
@@ -114,9 +135,11 @@ nav a:hover {
   font-size: 80px;
   max-width: 750px;
   color: #333;
+  margin-top: 50px;
 }
 
 #hereforyou {
+  margin: 0;
   font-size: 80px;
   font-weight: 800;
   color: #fdfdfd;
@@ -147,7 +170,6 @@ nav a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 150px 0 0 0;
 }
 
 #buttons a {
@@ -174,12 +196,11 @@ nav a:hover {
   color: #fdfdfd;
   font-size: 50px;
   text-align: center;
-  position: relative;
   opacity: 1;
-  bottom: -100px;
   -webkit-transition-duration: 0.3s;
        -o-transition-duration: 0.3s;
           transition-duration: 0.3s;
+
 }
 
 .scroll-arrow i {
@@ -632,7 +653,25 @@ footer #nope {
 
   90% {
     -webkit-transform: translate3d(0,-6px,0);
-            transform: translate3d(0,-6px,0);
+    transform: translate3d(0,-6px,0);
+  }
+}
+
+@media all and (max-height: 1100px) {
+  #buttons {
+    padding-top: 30px;
+  }
+}
+@media all and (max-height: 1000px) {
+  #big-three {
+    padding-top: 140px;
+    padding-bottom: 100px;
+  }
+  .ailment, #hereforyou {
+    font-size: 60px;
+  }
+  #the-ailment-container {
+    height: 140px;
   }
 }
 
@@ -645,7 +684,42 @@ footer #nope {
   }
   #buttons a {
     font-size: 20px;
-    padding: 15px 30px;
+  }
+}
+@media all and (max-height: 775px) {
+  #big-three {
+    padding-top: 120px;
+    padding-bottom: 50px;
+  }
+  .ailment, #hereforyou {
+    font-size: 50px;
+  }
+  #the-ailment-container{
+    height: 122px;
+  }
+  #buttons {
+    padding-top: 20px;
+  }
+  #buttons a {
+    font-size: 16px;
+    
+  }
+}
+@media all and (max-height: 615px) {
+  #big-three {
+    flex-flow: row wrap;
+  }
+  #the-ailment-container {
+    flex: 1 1 50%;
+    height: auto;
+    align-items: flex-start;
+  }
+  #hereforyou {
+    flex: 1 1 50%;
+  }
+  #buttons {
+    flex: 100%;
+    height: 59px;
   }
 }
 @media all and (max-width: 800px) {
@@ -680,18 +754,13 @@ footer #nope {
   }
 }
 @media all and (max-width: 700px) {
-  #buttons {
-    margin-top: 50px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-  }
-  #buttons a {
-    margin-bottom: 30px;
-  }
   #location iframe {
     width: 100%;
+  }
+}
+@media all and (max-width: 650px) {
+  #buttons a {
+    margin: 0 7px;
   }
 }
 @media all and (max-width: 575px) {
