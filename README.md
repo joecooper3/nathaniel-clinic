@@ -6,7 +6,7 @@ To emphasize the clinic's open door policy (and to help clear up the misconcepti
 From design to development to deployment, the site was completed in approximately 48 hours.
 
 ## Installation?
-Techwise, the page is really pretty vanilla. Outside of a bit jQuery for the scrollspy (thanks [Bootstrap] (https://getbootstrap.com/) and [Popper](https://popper.js.org/)), the site uses just plain old HTML, CSS, and JavaScript. It's nice to get away from the command line every now and then.
+Techwise, the page is really pretty vanilla. Outside of a bit jQuery for the scrollspy (thanks [Bootstrap](https://getbootstrap.com/) and [Popper](https://popper.js.org/)), the site uses just plain old HTML, CSS, and JavaScript. It's nice to get away from the command line every now and then.
 
 ## Author
 Joe Cooper, Associate Director of Communications & Design at CASES  
